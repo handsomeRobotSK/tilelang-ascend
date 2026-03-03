@@ -1137,7 +1137,7 @@ void CodeGenTileLangAscendPto::GemmV0Codegen(const CallNode *op) {
     c_buffer_in_pipeline = true;
   }
 
-  std::map<std::string, std::string> params = extractTemplateParams(op_name);
+  // std::map<std::string, std::string> params = extractTemplateParams(op_name);
   std::string data_type_input = params["data_type_input"];
   this->stream << kAscendPtoScope << "gemm_v0" << "<"
                << params["data_type_input"] << ", "
